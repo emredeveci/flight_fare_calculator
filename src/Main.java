@@ -63,11 +63,11 @@ public class Main {
             flightCost = (ageDiscount == 0) ? flightCost : flightCost - (flightCost * ageDiscount);
             flightCost -= flightCost * 0.2;
             flightCost *= 2;
-            System.out.println("Your flight cost is: " + flightCost + " TL");
+            System.out.println("Your flight cost is: " + flightCost + " TL.");
         } else {
             flightCost = kilometers * 0.1;
             flightCost = (ageDiscount == 0) ? flightCost : flightCost - (flightCost * ageDiscount);
-            System.out.println("Your flight cost is: " + flightCost + " TL");
+            System.out.println("Your flight cost is: " + flightCost + " TL.");
         }
 
         input.close();
