@@ -8,7 +8,7 @@ public class Main {
         boolean validKilometers = true , validAge = true, validFlightType = true;
         boolean roundTripDiscount = false;
 
-        int kilometers = 0, age = 0, flightType;
+        int kilometers = 0, age, flightType;
         double ageDiscount = 0;
         double flightCost;
 
@@ -21,7 +21,6 @@ public class Main {
                 validKilometers = false;
             } else {
                 System.out.println("Please enter a valid number.");
-                validKilometers = true;
             }
         }
 
@@ -39,7 +38,6 @@ public class Main {
                 validAge = false;
             } else {
                 System.out.println("Please enter a valid number.");
-                validAge = true;
             }
         }
 
@@ -54,11 +52,10 @@ public class Main {
                 }
             } else {
                 System.out.println("Please enter a valid number.");
-                validFlightType = true;
             }
         }
 
-        //final calculation with the round trip discount taken into account
+        //fare calculation
         if (roundTripDiscount) {
             flightCost = kilometers * 0.1;
             flightCost = (ageDiscount == 0) ? flightCost : flightCost - (flightCost * ageDiscount);
